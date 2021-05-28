@@ -1,0 +1,1099 @@
+/* ==========================================================================
+   CSS for Customizer Custom Controls
+   ========================================================================== */
+.control-clearfix {
+    clear: both;
+}
+.cz-control-options {   
+}
+.cz-control-options .munk-cz-devices {    
+    text-align: right;
+    margin-bottom: 7px;
+}
+.cz-control-options .munk-cz-devices li {
+    width: 16px;
+    height: 16px;
+    list-style: none;
+    display: inline-block;
+    padding: 3px 0px 0px 6px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+.cz-control-options .munk-cz-devices li button:active,
+.cz-control-options .munk-cz-devices li button:focus,
+.cz-control-options .munk-cz-devices li button {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+.cz-control-options .munk-cz-devices li button .dashicons {    
+    font-size: 20px;
+    color: gray;
+}
+.cz-control-options .munk-cz-devices li.active{
+     filter: grayscale(0);
+}
+.cz-control-options .munk-cz-devices li.active .dashicons {    
+    color:#007cba;
+}
+.google_fonts_select_control {            
+}
+.munk-font-preview {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    background: #fff;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    padding-right: 8px;
+    padding: 6px;
+    transition: border-color 0.1s linear;
+    margin-bottom: 15px;
+}
+.munk-font-preview.opened,
+.munk-font-preview:hover {
+    border: 1px solid #007cba;
+}
+.munk-font-preview div {
+    padding: 6px 0 6px 8px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+}
+.munk-font-preview div span {
+    display: inline-flex;
+    align-items: center;
+    text-transform: capitalize;
+}
+.munk-font-preview a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 17px;
+    height: 17px;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    opacity: 0.7;
+    color: inherit;
+    text-decoration: none;
+}
+.munk-font-preview:hover a {
+    color: #007cba;
+    box-shadow: none;
+}
+.munk-font-preview a:before {
+    content: '\2193';
+    font-size: 20px;
+}
+.munk-font-preview.opened a:before {
+    content: '\00d7';   
+    font-size: 20px;
+}
+.munk-font-preview i {
+    padding: 0px 10px;
+}
+.google_fonts_select_control .google-font-wrapper {
+    position: relative;
+}
+.google_fonts_select_control .google-font-wrapper-modal {
+    z-index: 50;
+    left: 0px; 
+    top: -8px;
+    position:relative;    
+    display: flex;
+    flex-direction: column;
+    width: 88%;
+    padding: 20px;
+    border-radius: 3px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 15px 15px rgba(0,0,0,0.1);    
+    opacity: 0;
+    display: none;
+    -moz-transition: opacity 0ms linear, visibility 0s linear 10ms;
+    -o-transition: opacity 0ms linear, visibility 0s linear 10ms;
+    -webkit-transition: opacity 0ms linear, visibility 0s linear;
+    -webkit-transition-delay: 0s, 10ms;
+    transition: opacity 0ms linear, visibility 0s linear 10ms;    
+}
+.box-show {
+  opacity: 1 !important;
+  display: block !important;
+}
+.google_fonts_select_control .google-font-wrapper-modal .select2 {
+    padding: 1px 0;
+}
+.google_fonts_select_control .google-font-wrapper-modal input,
+.google_fonts_select_control .google-font-wrapper-modal .select2,
+.google_fonts_select_control .google-font-wrapper-modal select {
+    width: 100% !important;
+    background-color: #fff;
+    border:1px solid #e1e1e1;
+    font-size: 13px;
+}
+.google_fonts_select_control .google-font-wrapper-modal h5 {
+    margin: 0;
+}
+.google_fonts_select_control .google-font-wrapper-modal .text-transform,
+.google_fonts_select_control .google-font-wrapper-modal .font-size {
+    float: left;
+    width: 45%;
+    padding-right:10px;
+    margin-bottom: 10px;
+}
+.google_fonts_select_control .google-font-wrapper-modal .text-align,
+.google_fonts_select_control .google-font-wrapper-modal .line-height {
+    float: left;
+    width: 50%;    
+    margin-bottom: 10px;
+}
+/* responsive controls */
+.font-preview-box .font-size-desktop,
+.font-preview-box .font-size-tablet,
+.font-preview-box .font-size-mobile,
+.google-fonts-text-align-desktop,
+.google-fonts-text-align-tablet,
+.google-fonts-text-align-mobile,
+.google-fonts-text-transform-desktop,
+.google-fonts-text-transform-tablet,
+.google-fonts-text-transform-mobile,
+.google-fonts-line-height-desktop,
+.google-fonts-line-height-tablet,
+.google-fonts-line-height-mobile,
+.google-fonts-font-size-desktop,
+.google-fonts-font-size-tablet,
+.google-fonts-font-size-mobile {
+    display: none;
+}
+.preview-desktop .google-fonts-text-align-desktop,
+.preview-tablet .google-fonts-text-align-tablet,
+.preview-mobile .google-fonts-text-align-mobile,
+.preview-desktop .google-fonts-text-transform-desktop,
+.preview-tablet .google-fonts-text-transform-tablet,
+.preview-mobile .google-fonts-text-transform-mobile,
+.preview-desktop .google-fonts-line-height-desktop,
+.preview-tablet .google-fonts-line-height-tablet,
+.preview-mobile .google-fonts-line-height-mobile,
+.preview-desktop .google-fonts-font-size-desktop,
+.preview-tablet .google-fonts-font-size-tablet,
+.preview-mobile .google-fonts-font-size-mobile {
+    display: block;
+}
+.preview-desktop .font-preview-box .font-size-desktop,
+.preview-tablet .font-preview-box .font-size-tablet,
+.preview-mobile .font-preview-box .font-size-mobile {
+    display: inline-block;
+}
+/* ==========================================================================
+   Dimensions Controls
+   ========================================================================== */
+.munk-dimensions-control {   
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    padding: 10px;
+}
+.munk-dimensions-control .customize-control-description {
+    font-size: 11px;
+    display: block;
+    margin-top: 15px !important;
+    overflow: hidden;
+}
+.munk-dimensions-control .dimensions {
+    display: flex;
+    align-items: flex-start;
+}
+.munk-dimensions-control .dimensions span {
+    margin-right: 0px;    
+}
+.munk-dimensions-control .dimensions span input {
+    border-collapse: collapse;
+    font-size: 13px;
+    text-align: center;    
+}
+.munk-dimensions-control .dimensions span label {
+    text-align: center;
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+.munk-dimensions-control .dimensions.device-desktop,
+.munk-dimensions-control .dimensions.device-tablet,
+.munk-dimensions-control .dimensions.device-mobile {
+    display: none;
+}
+.preview-desktop .munk-dimensions-control .dimensions.device-desktop,
+.preview-tablet .munk-dimensions-control .dimensions.device-tablet,
+.preview-mobile .munk-dimensions-control .dimensions.device-mobile {
+    display: flex;
+}
+/* ==========================================================================
+   Standard Selection
+   ========================================================================== */
+.customize-control select,
+.select2-container--default .selection .select2-selection--single {
+	border: none;
+	background-color: #fcfcff;
+	position: relative;
+	border-radius: 0;
+	height: 27px;
+	line-height: 27px;
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.wp-customizer .select2-container--default .selection .select2-selection--multiple {
+	border: none;
+	background-color: #fcfcff;
+	border-radius: 0;
+	height: auto;
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.wp-customizer .select2-container--default .select2-selection--multiple .select2-selection__rendered {
+	width: 95%;
+}
+
+.wp-customizer .select2-container--default .select2-selection--multiple .select2-selection__clear {
+	position: absolute;
+	right: 0;
+}
+
+.wp-customizer .select2-container .select2-dropdown {
+	z-index: 900000;
+}
+
+.customize-control select:active,
+.customize-control select:focus {
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+/* ==========================================================================
+   Standard Input
+   ========================================================================== */
+input[type="text"],
+input[type="number"],
+input[type="url"],
+input[type="email"],
+input[type="date"] {
+	background-color: #fcfcff;
+	position: relative;
+	border-radius: 0;
+	border: 1px solid #eee;
+	height: 27px;
+	line-height: 27px;
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+input[type="text"]:active,
+input[type="text"]:focus,
+input[type="number"]:active,
+input[type="number"]:focus {
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+/* ==========================================================================
+   Simple Notice
+   ========================================================================== */
+
+.simple-notice-custom-control .customize-control-description {
+	line-height: 1.6
+}
+
+.simple-notice-custom-control code {
+	font-size: 90%;
+	padding: 2px 4px;
+}
+
+/* ==========================================================================
+   Textarea/TinyMCE
+   ========================================================================== */
+.tinymce-control textarea {
+	width: 100%;
+	padding: 10px;
+}
+
+/* ==========================================================================
+   Text Radio Buttons
+   ========================================================================== */
+.text_radio_button_control:after {
+	content: " ";
+	display: block;
+	clear: both;
+}
+
+.text_radio_button_control .radio-buttons {
+	display: inline-block;
+	border: 1px solid #f9f9fe;
+}
+
+.text_radio_button_control .radio-button-label {
+	cursor: pointer;
+	float: left;
+}
+
+.text_radio_button_control .radio-button-label > input {
+	display: none;
+}
+
+.text_radio_button_control .radio-button-label span {
+	cursor: pointer;
+	font-weight: 500;
+	border: 2px solid #f9f9fe;
+	margin: 0;
+	background-color: #eee;
+	padding: 5px 15px;
+	display: inline-block;
+}
+
+.text_radio_button_control .radio-button-label span:hover {
+	background-color: rgba(255, 255, 255, .2);
+	color: #2885bb;
+}
+
+.text_radio_button_control .radio-button-label > input:checked + span {
+	background-color: #2084bd;
+	color: #fff;
+}
+
+.text_radio_button_control .radio-button-label > input:checked + span:hover {
+	color: #fff;
+}
+
+/* ==========================================================================
+   Image Radio Buttons
+   ========================================================================== */
+.image_radio_button_control .radio-button-label {
+    margin-right: 3%;
+}
+.image_radio_button_control .radio-button-label > input {
+	display: none;
+}
+
+.image_radio_button_control .radio-button-label > img {
+	cursor: pointer;
+	border: 2px solid #ddd;
+	width: 90px;
+}
+
+.image_radio_button_control .radio-button-label > input:checked + img {
+	border: 2px solid #2885bb;
+}
+
+/* ==========================================================================
+   Image Checkboxes
+   ========================================================================== */
+.image_checkbox_control .checkbox-label > input {
+	display: none;
+}
+
+.image_checkbox_control .checkbox-label > img {
+	cursor: pointer;
+	border: 3px solid #ddd;
+}
+
+.image_checkbox_control .checkbox-label > input:checked + img {
+	border: 3px solid #2885bb;
+}
+
+/* ==========================================================================
+   Pill Checkboxes
+   ========================================================================== */
+.pill_checkbox_control .checkbox-label > input {
+	display: none;
+}
+.pill_checkbox_control .checkbox-label {
+    background-color: #fff;
+    padding: 10px;
+    margin: 5px auto;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    display: block;
+    width: 90%;
+    border: 1px solid #d6d6d6;
+}
+.pill_checkbox_control .checkbox-label > .sortable-pill-title {
+	box-sizing: border-box;
+	cursor: pointer;
+	background-color: #ddd;	
+	border-radius: 0px;
+	font-size: 1rem;
+	display: inline-block;	
+}
+
+.pill_checkbox_control .sortable .checkbox-label > .sortable-pill-title {
+	cursor: move;
+    font-size: 13px;
+}
+
+.pill_checkbox_control .sortable.fullwidth_pills .checkbox-label > .sortable-pill-title {
+	cursor: pointer;
+}
+
+.pill_checkbox_control .checkbox-label > input + .sortable-pill-title { 	
+    background-color: #fff;
+	color: #575f68;
+}
+
+.pill_checkbox_control .checkbox-label > input + .sortable-pill-title:before { 
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	font-family: "dashicons";
+	font-weight: normal;
+	font-size: 18px;
+	content: "\f177";
+	margin-left: 0px;
+    margin-right: 10px;
+	vertical-align: bottom;
+    opacity: 0.5;
+}
+.pill_checkbox_control .checkbox-label > input:checked + .sortable-pill-title:before { 
+    opacity: 1;
+    color: #0071a1;
+}
+.pill_checkbox_control .fullwidth_pills .checkbox-label > .sortable-pill-title {
+	width: 100%;
+	border-radius: 0;
+}
+
+.pill_checkbox_control .sortable.fullwidth_pills .checkbox-label > .sortable-pill-title {
+	width: 90%;
+}
+
+.pill-ui-state-highlight {
+	display: inline-block;
+	padding: 5px 15px;
+	border-radius: 20px;
+	font-size: 1rem;
+	border: 1px dotted #2084bd;
+	margin-bottom: 5px;
+	height: 16px;
+}
+
+.pill_checkbox_control .sortable_pills .pill-ui-state-highlight {
+	width: 50px;
+	border-radius: 20px;
+}
+
+.pill_checkbox_control .sortable_pills.fullwidth_pills .pill-ui-state-highlight {
+	width: 90%;
+	border-radius: 0;
+}
+
+.pill_checkbox_control .dashicons-move {
+	margin: 0px 0 0 0px;	
+	cursor: move;
+    font-size: 18px;
+}
+
+.pill_checkbox_control .dashicons-move:hover {
+	color: #a7a7a7;
+}
+
+.pill_checkbox_control .sortable_pills.fullwidth_pills .ui-sortable-helper {
+	width: calc(100% - 25px) !important;
+}
+
+/* ==========================================================================
+   Slider
+   ========================================================================== */
+.slider-custom-control {
+	margin-bottom: 30px;
+}
+
+.slider-custom-control input[type=number]::-webkit-inner-spin-button,
+.slider-custom-control input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.slider-custom-control input[type=number] {
+	-moz-appearance: textfield;
+}
+
+.slider-custom-control  .customize-control-title {
+	display: inline-block;
+}
+
+.slider-custom-control span.input_unit {
+    background-color: #fff;
+    border: 1px solid #c3c7ca;	
+	width: 120px;
+	float: right;
+    display: flex;
+    font-size: 12px;
+    flex-direction: row;
+}
+.slider-custom-control span.input_unit input[type=number] {	    
+    width: 60%;    
+    font-size: 12px;
+    padding: 0px 0px 0 0;
+    box-shadow: none;
+    background-color: #fff;
+    text-align: center;
+    border: none;
+    border-right: 1px solid #c3c7ca;	
+}
+.slider-custom-control span.input_unit span{		    
+    width: 40%;
+    font-size: 10px;
+    padding: 6px 0 0 0;
+    text-align: center;
+}
+
+.slider-custom-control .slider {
+	width: 85%;
+	float: left;
+	margin: 20px 0 10px;
+}
+
+.slider-custom-control .slider-reset {
+	float: right;
+	cursor: pointer;
+}
+
+.slider-custom-control .slider-value {
+	border: none;
+	text-align: right;
+	width: 50px;
+	margin-right: 5px;
+}
+
+.slider-custom-control .slider-value,
+.slider-custom-control .slider-unit {
+	float: right;
+}
+
+.slider-custom-control .ui-widget.ui-widget-content {
+	border: 3px solid #f4f4f4;
+}
+
+.slider-custom-control .ui-corner-all,
+.slider-custom-control .ui-corner-bottom,
+.slider-custom-control .ui-corner-right,
+.slider-custom-control .ui-corner-br {
+	border-bottom-right-radius: 3px;
+}
+
+.slider-custom-control .ui-corner-all,
+.slider-custom-control .ui-corner-bottom,
+.slider-custom-control .ui-corner-left,
+.slider-custom-control .ui-corner-bl {
+	border-bottom-left-radius: 3px;
+}
+
+.slider-custom-control .ui-corner-all,
+.slider-custom-control .ui-corner-top,
+.slider-custom-control .ui-corner-right,
+.slider-custom-control .ui-corner-tr {
+	border-top-right-radius: 3px;
+}
+
+.slider-custom-control .ui-corner-all,
+.slider-custom-control .ui-corner-top,
+.slider-custom-control .ui-corner-left,
+.slider-custom-control .ui-corner-tl {
+	border-top-left-radius: 3px;
+}
+
+.slider-custom-control .ui-widget-content {	
+    background: linear-gradient(90deg, #c3c7ca 50%, #c3c7ca 0%);
+	color: #333;
+}
+
+.slider-custom-control .ui-slider-horizontal {
+	height: 3px;
+}
+
+.slider-custom-control .ui-slider {
+	position: relative;
+	text-align: left;
+}
+
+.slider-custom-control .ui-state-default,
+.slider-custom-control .ui-widget-content .ui-state-default,
+.slider-custom-control .ui-widget-header .ui-state-default,
+.slider-custom-control .ui-button,
+.slider-custom-control .ui-button.ui-state-disabled:hover,
+.slider-custom-control .ui-button.ui-state-disabled:active {
+	background: #2885bb none repeat scroll 0 0;    
+	border: 1px solid #2885bb;
+	color: #454545;
+	font-weight: normal;
+}
+
+.slider-custom-control .ui-slider-horizontal .ui-slider-handle {
+	margin-left: -7px;
+	top: -7px;
+	border-radius: 100%;
+}
+
+.slider-custom-control .ui-slider .ui-slider-handle {
+	cursor: pointer;
+	height: 14px;
+	position: absolute;
+	width: 14px;
+	z-index: 2;
+}
+.slider-custom-control .ui-slider .ui-slider-handle.ui-state-focus {    
+    outline: none;
+}
+
+.slider-custom-control .dashicons-image-rotate {
+	margin-top: 10px;
+	color: #d4d4d4;
+	size: 16px;
+}
+
+.slider-custom-control .dashicons-image-rotate:hover {
+	color: #a7a7a7;
+}
+
+/* ==========================================================================
+   Sortable Repeater
+   ========================================================================== */
+.sortable {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.sortable input[type="text"] {
+	margin: 5px 5px 5px 0;
+	width: 80%;
+}
+
+.sortable div {
+	cursor: move;
+}
+
+.customize-control-sortable-repeater-delete {
+	color: #d4d4d4;
+}
+
+.customize-control-sortable-repeater-delete:hover {
+	color: #f00;
+}
+
+.customize-control-sortable-repeater-delete .dashicons-no-alt {
+	text-decoration: none;
+	margin: 8px 0 0 0;
+	font-weight: 600;
+}
+
+.customize-control-sortable-repeater-delete:active,
+.customize-control-sortable-repeater-delete:focus {
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.repeater .dashicons-sort {
+	margin: 8px 5px 0 5px;
+	color: #d4d4d4;
+}
+
+.repeater .dashicons-sort:hover {
+	color: #a7a7a7;
+}
+
+/* ==========================================================================
+   Single Accordion
+   ========================================================================== */
+.single-accordion-toggle {
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 24px;
+	padding: 10px 5px 5px 0;
+	cursor: pointer;
+}
+
+.accordion-icon-toggle {
+	font-size: 18px;
+	margin-left: 5px;
+	margin-top: 5px;
+	-webkit-transition: -webkit-transform 0.3s ease-in-out;
+	-moz-transition: -moz-transform 0.3s ease-in-out;
+	-o-transition: -o-transform 0.3s ease-in-out;
+	transition: transform 0.3s ease-in-out;
+}
+
+.single-accordion-toggle-rotate .accordion-icon-toggle {
+	filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=-0.5);
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	display: inline-block;
+}
+
+.single-accordion {
+	display: none;
+}
+
+.single-accordion ul {
+	margin: 0;
+	padding: 0;
+}
+
+.single-accordion li {
+	background-color: #e4e4e4;
+	color: #888;
+	width: 115px;
+	display: inline-block;
+	padding: 5px;
+	margin: 5px;
+	text-align: center;
+}
+
+.single-accordion li i {
+	margin-left: 5px;
+}
+
+/* ==========================================================================
+   Alpha Color Picker
+   ========================================================================== */
+.customize-control-alpha-color .wp-picker-container .iris-picker {
+	border-bottom:none;
+}
+
+.customize-control-alpha-color .wp-picker-container {
+	max-width: 257px;
+}
+
+.customize-control-alpha-color .wp-picker-open + .wp-picker-input-wrap {
+	width: 100%;
+}
+
+.customize-control-alpha-color .wp-picker-input-wrap input[type="text"].wp-color-picker.alpha-color-control {
+	float: left;
+	width: 195px;
+}
+
+.customize-control-alpha-color .wp-picker-input-wrap .button {
+	margin-left: 0;
+	float: right;
+}
+
+.wp-picker-container .wp-picker-open ~ .wp-picker-holder .alpha-color-picker-container {
+	display: block;
+}
+
+.alpha-color-picker-container {
+	border: 1px solid #dfdfdf;
+	border-top: none;
+	display: none;
+	background-color: #fff;
+	padding: 0 11px 10px;
+	position: relative;
+}
+
+.alpha-color-picker-container .ui-widget-content,
+.alpha-color-picker-container .ui-widget-header,
+.alpha-color-picker-wrap .ui-state-focus {
+	background: transparent;
+	border: none;
+}
+
+.alpha-color-picker-wrap a.iris-square-value:focus {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.alpha-color-picker-container .ui-slider {
+	position: relative;
+	z-index: 1;
+	height: 24px;
+	text-align: center;
+	margin: 0 auto;
+	width: 88%;
+	width: calc( 100% - 28px );
+}
+
+.alpha-color-picker-container .ui-slider-handle,
+.alpha-color-picker-container .ui-widget-content .ui-state-default {
+	color: #777;
+	background-color: #fff;
+	text-shadow: 0 1px 0 #fff;
+	text-decoration: none;
+	position: absolute;
+	z-index: 2;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+	border: 1px solid #aaa;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	margin-top: -2px;
+	top: 0;
+	height: 26px;
+	width: 26px;
+	cursor: ew-resize;
+	font-size: 0;
+	padding: 0;
+	line-height: 27px;
+	margin-left: -14px;
+}
+.alpha-color-picker-container .ui-slider-handle.show-opacity {
+	font-size: 12px;
+}
+
+.alpha-color-picker-container .click-zone {
+	width: 14px;
+	height: 24px;
+	display: block;
+	position: absolute;
+	left: 10px;
+}
+
+.alpha-color-picker-container .max-click-zone {
+	right: 10px;
+	left: auto;
+}
+
+.alpha-color-picker-container .transparency {
+	height: 24px;
+	width: 100%;
+	background-color: #fff;
+	background-image: url(../images/color-picker-transparency-grid.png);
+	box-shadow: 0 0 5px rgba(0,0,0,0.4) inset;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	padding: 0;
+	margin-top: -24px;
+}
+
+@media only screen and (max-width: 782px) {
+	.customize-control-alpha-color .wp-picker-input-wrap input[type="text"].wp-color-picker.alpha-color-control {
+		width: 184px;
+	}
+}
+
+@media only screen and (max-width: 640px) {
+	.customize-control-alpha-color .wp-picker-input-wrap input[type="text"].wp-color-picker.alpha-color-control {
+		width: 172px;
+		height: 33px;
+	}
+}
+
+/* ==========================================================================
+   Alpha Color Picker & Standard Color Picker
+   ========================================================================== */
+.customize-control-color .wp-color-result,
+.customize-control-alpha-color .wp-color-result {
+	box-shadow: none;
+}
+
+.customize-control-color .wp-color-result .wp-color-result-text,
+.customize-control-alpha-color .wp-color-result .wp-color-result-text {
+	border-left: none;
+}
+
+.wp-picker-holder .iris-picker .iris-palette {
+	box-shadow: none;
+}
+
+.wp-picker-container .iris-picker,
+.wp-picker-container .alpha-color-picker-container {
+	border-radius: 0;
+	border: none;
+}
+
+.wp-picker-container .alpha-color-picker-container {
+	width: 233px;
+}
+
+/* ==========================================================================
+   WPColorPicker Alpha Color Picker
+   ========================================================================== */
+.customize-control-wpcolorpicker-alpha-color .wp-color-result {
+	box-shadow: none;
+}
+
+.customize-control-wpcolorpicker-alpha-color .wp-picker-input-wrap input[type="text"].wp-color-picker {
+	float: left;
+	width: 195px !important;
+}
+
+.customize-control-wpcolorpicker-alpha-color .wp-color-result .wp-color-result-text {
+	border-left: none;
+}
+
+.customize-control-wpcolorpicker-alpha-color .iris-picker-inner .iris-slider,
+.customize-control-wpcolorpicker-alpha-color .iris-picker-inner .iris-alpha-slider,
+.customize-control-two-color-gradient .iris-picker-inner .iris-alpha-slider {
+	width: 17.6px !important;
+}
+
+/* ==========================================================================
+   Google Fonts Select
+   ========================================================================== */
+.google_fonts_select_control .google-fonts,
+.google_fonts_select_control .weight-style {
+	margin-bottom: 10px;
+}
+/* ==========================================================================
+   WPColorPicker Alpha Color Picker Custom Control
+   ========================================================================== */
+.wpcolorpicker_alpha_color_control .wp-picker-container {
+    display: block;
+    margin-bottom: 3px;
+}
+.wpcolorpicker_alpha_color_control .wp-picker-container .wp-color-result.button {
+    width:100%;
+    min-height: 38px;
+    margin: 0 6px 6px 0;
+    padding: 0 0 0 30px;
+    font-size: 11px;
+    background-image: unset !important;
+    background-color: #f7f7f7 !important;    
+}
+.wpcolorpicker_alpha_color_control .color-unit-wrapper label.color_label {
+    display: none;
+}
+
+.wpcolorpicker_alpha_color_control .wp-picker-container .wp-color-result.button span.wp-color-result-text {
+	color: #555;
+}
+/* ==========================================================================
+   Custom Heading Control
+   ========================================================================== */
+.munk-custom-heading-control p {
+    color: #191919;
+    font-weight: 600;
+    font-size: 13px;
+    border: 1px solid #d5d0d0;
+    padding: 5px 15px;
+    background-color: #fff;
+    text-transform: uppercase;
+    margin-left: -12px;
+    margin-right: -14px;	
+}
+
+/* ==========================================================================
+  Toggle Switch Control
+   ========================================================================== */
+
+.customize-control-toggle_switch .toggle--wrapper {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+
+	-webkit-box-direction: normal;
+	-webkit-box-orient: horizontal;
+	-webkit-box-pack: start;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	-ms-flex-pack: start;
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
+	
+	margin: 10px 0;
+}
+
+.customize-control-toggle_switch .toggle--wrapper .customize-control-title {	
+	margin-bottom: 7px;
+	vertical-align: middle;
+	-webkit-box-flex: 2;
+	-webkit-flex: 2 0 0;
+	-ms-flex: 2 0 0;
+	flex: 2 0 0;
+}
+
+.customize-control-toggle_switch .toggle--wrapper input[type=checkbox] {
+	display: none;
+}
+
+.customize-control-toggle_switch {
+	margin-bottom: 0
+}
+
+.customize-control-toggle_switch .toggle--wrapper label {
+	background-color: #555d66;
+	border-radius: 14px;
+	cursor: pointer;
+	display: inline-block;
+	height: 20px;
+	outline: none;
+	position: relative;
+	right: 0px;
+	top: 2px;
+	-webkit-transition: background 0.2s ease;
+	transition: background 0.2s ease;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	width: 34px;
+}
+
+.customize-control-toggle_switch .toggle--wrapper label::after,
+.customize-control-toggle_switch .toggle--wrapper label::before {
+	content: "";
+	display: block;
+	position: absolute;
+}
+
+.customize-control-toggle_switch .toggle--wrapper label::after {
+	border: 2px solid #555d66;
+	border-radius: 50%;
+	box-sizing: border-box;
+	height: 12px;
+	left: 4px;
+	top: 4px;
+	-webkit-transition: background 0.2s ease, -webkit-transform 0.2s ease;
+	transition: background 0.2s ease, -webkit-transform 0.2s ease;
+	transition: transform 0.2s ease, background 0.2s ease;
+	transition: transform 0.2s ease, background 0.2s ease, -webkit-transform 0.2s ease;
+	width: 12px;
+}
+
+.customize-control-toggle_switch .toggle--wrapper label::before {
+	background-color: #eee;
+	border-radius: 60px;
+	bottom: 2px;
+	left: 2px;
+	right: 2px;
+	top: 2px;
+	-webkit-transition: background 0.2s ease;
+	transition: background 0.2s ease;
+}
+
+.customize-control-toggle_switch .toggle--wrapper input[type=checkbox]:checked + label {
+	background-color: #0085ba;
+}
+
+.customize-control-toggle_switch .toggle--wrapper input[type=checkbox]:checked + label::after {
+	background-color: #0085ba;
+	border: 2px solid #fff;
+	-webkit-transform: translateX(14px);
+	-ms-transform: translateX(14px);
+	transform: translateX(14px);
+}
+
+.customize-control-toggle_switch .toggle--wrapper input[type=checkbox]:checked + label::before {
+	background-color: #0085ba;
+}
+
+.customize-control-toggle_switch:hover .toggle--wrapper label::before {
+	background-color: #d9dcdf;
+}
