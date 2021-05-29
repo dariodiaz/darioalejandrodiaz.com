@@ -1,0 +1,24 @@
+{
+  "name": "wp-site-tests",
+  "version": "1.0.0",
+  "description": "Cypress tests for personal site",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-personal:dariodiaz/darioalejandrodiaz.com.git"
+  },
+  "keywords": [
+    "Cypress",
+    "tests",
+    "personal",
+    "site"
+  ],
+  "author": "Dario Diaz",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^7.4.0"
+  }
+}
