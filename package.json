@@ -6,7 +6,8 @@
   "scripts": {
     "cy:open": "cypress open",
     "cy:spec": "cypress run --spec",
-    "cy:run": "cypress run",
+    "cy:run:dev": "cypress run --env host=http://localhost:8888",
+    "cy:run:prod": "cypress run --env host=https://darioalejandrodiaz.com",
     "cy:run:headed": "cypress run --headed",
     "cy:run:chrome": "cypress run --browser chrome",
     "cy:run:firefox": "cypress run --browser firefox"
