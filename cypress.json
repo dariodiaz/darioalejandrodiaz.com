@@ -2,5 +2,6 @@
     "env": {
         "baseUrl_development": "http://localhost:8888",
         "baseURL_production": "htpps://darioalejandrodiaz.com"
-    }
+    },
+    "video": false
 }
